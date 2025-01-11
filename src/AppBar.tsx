@@ -13,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Footer from "./Footer";
+//import Footer from "./Footer";
 import Body1 from "./Body1";
 import Body2 from "./Body2";
 import Body3 from "./Body3";
