@@ -73,7 +73,7 @@ export default function DrawerAppBar(props: Props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' } }}
           >
-            <b>MUI</b>
+            <b>Sharma Tax Associates</b>
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             {navItems.map((item) => (
