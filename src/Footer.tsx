@@ -19,19 +19,20 @@ export default function BoxBasic() {
       <Grid container spacing={2} bgcolor="#063970">
 
         <Grid size={{ xs: 4, md: 6 }} bgcolor="#063970">
-         <center><b>Sharma Tax Advisors</b></center>
+         <center><b></b></center>
         </Grid>
 
         <Grid size={{ xs: 4, md: 6 }}>
-        <center><b>Specialization</b></center>
+        <center><b></b></center>
         </Grid>
     </Grid>
 
 
     <Grid container spacing={2} alignItems="center" justifyContent="center">
-        <Grid size={{ xs: 6, md: 8 }} alignItems="center" justifyContent="center" >
-          <center><SocialMedia /></center>
-          <center>Sharma Tax Advisors | CPA CANADA | CPA USA  | Charted Accountant |Copyright 2022 | All Rights Reserved</center>
+        <Grid size={{ xs: 6, md: 8 }} alignItems="center" justifyContent="center">
+        <br/><br/>
+          <center><SocialMedia /></center><br/><br/>
+          <center><text style={{ color: 'white' }}>Sharma Tax Advisors | CPA CANADA | CPA USA  | Charted Accountant (India) |Copyright 2025 | All Rights Reserved <br/><br/></text></center>
         </Grid>
         </Grid>
         
