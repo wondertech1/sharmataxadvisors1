@@ -14,9 +14,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 //import Footer from "./Footer";
-import Body1 from "./Body1";
-import Body2 from "./Body2";
-import Body3 from "./Body3";
 
 interface Props {
   /**
@@ -27,7 +24,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Pricing', 'Services','About us','Cotact us'];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -58,9 +55,9 @@ export default function DrawerAppBar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', bgcolor:'#d9c5609e' }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" color='primary' sx={{ bgcolor: "#063970" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -74,14 +71,14 @@ export default function DrawerAppBar(props: Props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' } }}
           >
-            MUI
+            <b>MUI</b>
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+                <b>{item}</b>
               </Button>
             ))}
           </Box>
@@ -106,8 +103,9 @@ export default function DrawerAppBar(props: Props) {
       </nav>
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
+        
         <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
+          Heading Page : Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
           fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
           aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
           cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
@@ -140,9 +138,6 @@ export default function DrawerAppBar(props: Props) {
           Voluptates perspiciatis, in pariatur impedit, nam facilis libero dolorem
           dolores sunt inventore perferendis, aut sapiente modi nesciunt.
         </Typography>
-        <Body1 />
-        <Body2 />
-        <Body3 />
         
       </Box>
       
