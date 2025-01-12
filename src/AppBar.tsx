@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,7 +14,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-//import Footer from "./Footer";
+import Footer from "./Footer";
+import Landingpage from "./Landingpage";
+import Contactus from "./Contactus";
+import Aboutus from "./Aboutus";
+import Pricing from "./Pricing";
+import Services from "./Services";
+import test from "../src/assets/tax3.jpg"; // with import
 
 
 interface Props {
@@ -27,13 +34,27 @@ interface Props {
 const drawerWidth = 240;
 const navItems = ['Home', 'Pricing', 'Services','About us','Contact us'];
 
+
+
+
+
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+   //const [activeStep, setActiveStep] = React.useState(0);
+    const [activeComp, setActiveComp] = useState("Home");
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+
+  const openNavItem = (item:any) =>{
+    //alert(item);
+    setActiveComp(item);
+  }
+
+
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -44,7 +65,7 @@ export default function DrawerAppBar(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={()=>openNavItem(item)}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -56,7 +77,8 @@ export default function DrawerAppBar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', bgcolor:'#d9c5609e' }}>
+    <Box>
+    <Box sx={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar component="nav" color='primary' sx={{ bgcolor: "#063970" }}>
         <Toolbar>
@@ -78,7 +100,7 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: '#fff' }} onClick={()=>openNavItem(item)}>
                 <b>{item}</b>
               </Button>
             ))}
@@ -104,26 +126,16 @@ export default function DrawerAppBar(props: Props) {
       </nav>
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
-        
-        <Typography>
-
-       <h1 style={{ color: '#063970' }}> Sharma Tax Advisors 
-        <br/>Expertise You Can Count On, Solutions You Can Trust<br/></h1>
-        <h2>Tax Preparation, Tax Planning and Business Advice For Candada & USA</h2>
-
-        <Button variant="contained" size="large">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Book Appointment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        </Button>
-
-        <img src={'../taxreturn.webp'} />
-
-
-
-         
-        </Typography>
-        
       </Box>
       
+    </Box>
+    <img src={test} width="500"/>
+    {(activeComp === "Home") && <Landingpage/>}
+    {(activeComp === "Contact us") && <Contactus />}
+    {(activeComp === "About us") && <Aboutus />}
+    {(activeComp === "Pricing") && <Pricing />}
+    {(activeComp === "Services") && <Services />}
+    <Footer />
     </Box>
     
     

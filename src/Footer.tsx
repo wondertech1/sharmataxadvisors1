@@ -32,7 +32,7 @@ export default function BoxBasic() {
         <Grid size={{ xs: 6, md: 8 }} alignItems="center" justifyContent="center">
         <br/><br/>
           <center><SocialMedia /></center><br/><br/>
-          <center><text style={{ color: 'white' }}>Sharma Tax Advisors | CPA CANADA | CPA USA  | Charted Accountant (India) |Copyright 2025 | All Rights Reserved <br/><br/></text></center>
+          <center><text style={{ color: 'white' }}>Sharma Tax Advisors | CPA CANADA | CPA USA  | Charted Accountant | Copyright 2025 | All Rights Reserved <br/><br/></text></center>
         </Grid>
         </Grid>
         
