@@ -20,7 +20,7 @@ import Contactus from "./Contactus";
 import Aboutus from "./Aboutus";
 import Pricing from "./Pricing";
 import Services from "./Services";
-import test from "../src/assets/tax3.jpg"; // with import
+//import test from "../src/assets/tax3.jpg"; // with import
 
 
 interface Props {
@@ -129,7 +129,7 @@ export default function DrawerAppBar(props: Props) {
       </Box>
       
     </Box>
-    <img src={test} width="500"/>
+    
     {(activeComp === "Home") && <Landingpage/>}
     {(activeComp === "Contact us") && <Contactus />}
     {(activeComp === "About us") && <Aboutus />}
