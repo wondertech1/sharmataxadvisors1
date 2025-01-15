@@ -58,9 +58,9 @@ export default function DrawerAppBar(props: Props) {
 
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center'}}>
+      <Typography variant="h6" sx={{ my: 2}}>
+        Sharma Tax Advisors
       </Typography>
       <Divider />
       <List>
@@ -101,7 +101,7 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }} onClick={()=>openNavItem(item)}>
+              <Button key={item} sx={{ color: '#063970' }} onClick={()=>openNavItem(item)}>
                 <b>{item}</b>
               </Button>
             ))}
