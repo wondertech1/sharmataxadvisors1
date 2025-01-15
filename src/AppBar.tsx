@@ -20,6 +20,8 @@ import Contactus from "./Contactus";
 import Aboutus from "./Aboutus";
 import Pricing from "./Pricing";
 import Services from "./Services";
+import Header from "./Header";
+//import Body1 from "./Body2"
 //import test from "../src/assets/tax3.jpg"; // with import
 
 
@@ -130,7 +132,8 @@ export default function DrawerAppBar(props: Props) {
       
     </Box>
     
-    {(activeComp === "Home") && <Landingpage/>}
+    
+    {(activeComp === "Home") && <Landingpage />}
     {(activeComp === "Contact us") && <Contactus />}
     {(activeComp === "About us") && <Aboutus />}
     {(activeComp === "Pricing") && <Pricing />}
