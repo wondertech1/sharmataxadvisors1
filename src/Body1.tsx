@@ -14,19 +14,19 @@ import Table from '@mui/material/Table';
 export default function BoxBasic() {
   return (
     
-    <Box component="section" sx={{ border: 0, bgcolor:'#d2e8f340'}}>
-      <Grid container spacing={0} alignContent='center' justifyContent='center' alignSelf='center' textAlign='center'>
-      <Grid size="grow">
+    <Box component="section" sx={{ border: 0, bgcolor:'#d2e8f340' }}>
+      <Grid container spacing={0} alignContent='center' justifyContent='center' alignSelf='center' textAlign='center' overflow="hidden">
+      <Grid size="grow" overflow="hidden">
       <h1 style={{ fontSize: 20, fontWeight: 900, fontFamily: 'Georgia, serif', alignContent:'center' }}>
       Sharma Tax Advisors offers comprehensive tax services and tax planning, 
       in Canada and the United States. <br/>
       Let us help you maximize your benefits and simplify the tax process.</h1>
       </Grid></Grid>
       
-      <Grid container spacing={0} alignContent='center' justifyContent='center' alignSelf='center' textAlign='center'>
+      <Grid container spacing={0} alignContent='center' justifyContent='center' alignSelf='center' textAlign='center' overflow="hidden">
       
       
-      <Grid size="auto">
+      <Grid size="auto" overflow="hidden">
       <Table sx={{ border: 0 }}><tr><td>
       <img src={taxplan}/>
       </td>
@@ -37,7 +37,7 @@ export default function BoxBasic() {
       </Table>
       </Grid>
 
-      <Grid size="auto">
+      <Grid size="auto" overflow="hidden">
       <Table><tr><td>
       <img src={taxplan}/>
       </td>
@@ -48,7 +48,7 @@ export default function BoxBasic() {
       </Table>
       </Grid>
 
-      <Grid size="auto">
+      <Grid size="auto" overflow="hidden">
       <Table><tr><td>
       <img src={taxplan}/>
       </td>

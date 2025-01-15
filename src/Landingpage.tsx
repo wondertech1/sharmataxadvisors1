@@ -7,11 +7,13 @@ import Body1 from "./Body1";
 import Header from "./Header";
 
 
+
 export default function BoxBasic() {
   return (
-    <Box width="99%">
+    <Box>
          <Header />
          <Body1/>
+         
          
     </Box>
   );
