@@ -22,7 +22,8 @@ import Aboutus from "./Aboutus";
 import Pricing from "./Pricing";
 import Services from "./Services";
 import App from "./App";
-//import Body1 from "./Body2"
+import TaxCalculator from "./TaxCalculator";
+import Body1 from "./Body1"
 //import test from "../src/assets/tax3.jpg"; // with import
 
 
@@ -103,7 +104,7 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: 'red' }} onClick={()=>openNavItem(item)}>
+              <Button key={item} sx={{ color: 'white' }} onClick={()=>openNavItem(item)}>
                 <b>{item}</b>
               </Button>
             ))}
@@ -135,12 +136,15 @@ export default function DrawerAppBar(props: Props) {
     
     
     {(activeComp === "Home") && <Header onButtonClicked={openNavItem}/>}
+    {(activeComp === "Home") && <Body1 onButtonClicked2={openNavItem}/>}
     {(activeComp === "Home") && <Landingpage />}
     {(activeComp === "Contact us") && <Contactus />}
     {(activeComp === "About us") && <Aboutus />}
     {(activeComp === "Pricing") && <Pricing />}
     {(activeComp === "Services") && <Services />}
     {(activeComp === "Appointment") && <App />}
+    {(activeComp === "TaxCalculator") && <TaxCalculator />}
+    
     <Footer />
     </Box>
     
