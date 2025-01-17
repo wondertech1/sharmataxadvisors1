@@ -1,4 +1,5 @@
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
+import { Description } from "@mui/icons-material";
 
 /*== STEP 1 ===============================================================
 The section below creates a Todo database table with a "content" field. Try
@@ -9,7 +10,10 @@ specifies that any user authenticated via an API key can "create", "read",
 const schema = a.schema({
   Todo: a
     .model({
-      content: a.string(),
+      Name: a.string(),
+      Phone: a.float(),
+      Email: a.string(),
+      Preferred_DateTime: a.datetime(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
 });
