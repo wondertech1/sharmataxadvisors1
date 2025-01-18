@@ -10,12 +10,15 @@ import Box from '@mui/material/Box';
 export default function BoxBasic() {
   return (
     <Box component="section" sx={{ p: 2, border: 'none' }}>
-      Box 2: This Box renders as an HTML section element.
+      <br/>
+      At Sharma Tax Advisors, we simplify the complexities of tax filing for individuals and businesses across Canada and the USA. With over 25 years of industry expertise, we’ve built a reputation for delivering reliable, high-quality tax solutions tailored to your unique needs. Whether you’re filing personal taxes, managing corporate returns, or navigating cross-border tax regulations, our team ensures every detail is handled with precision and care.
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam, aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem, at ab sequi qui modi delectus quia corrupti alias distinctio nostrum. Minima ex dolor modi inventore sapiente necessitatibus aliquam fuga et. Sed numquam quibusdam at officia sapiente porro maxime corrupti perspiciatis asperiores, exercitationem eius nostrum consequuntur iure aliquam itaque, assumenda et! Quibusdam temporibus beatae doloremque voluptatum doloribus soluta accusamus porro reprehenderit eos inventore facere, fugit, molestiae ab officiis illo voluptates recusandae. Vel dolor nobis eius, ratione atque soluta, aliquam fugit qui iste architecto perspiciatis. Nobis, voluptatem! Cumque, eligendi unde aliquid minus quis sit debitis obcaecati error, delectus quo eius exercitationem tempore. Delectus sapiente, provident corporis dolorum quibusdam aut beatae repellendus est labore quisquam praesentium repudiandae non vel laboriosam quo ab perferendis velit ipsa deleniti modi! Ipsam, illo quod. Nesciunt commodi nihil corrupti cum non fugiat praesentium doloremque architecto laborum aliquid. Quae, maxime recusandae? Eveniet dolore molestiae dicta blanditiis est expedita eius debitis cupiditate porro sed aspernatur quidem, repellat nihil quasi praesentium quia eos, quibusdam provident. Incidunt tempore vel placeat voluptate iure labore, repellendus beatae quia unde est aliquid dolor molestias libero. Reiciendis similique exercitationem consequatur, nobis placeat illo laudantium! Enim perferendis nulla soluta magni error, provident repellat similique cupiditate ipsam, et tempore cumque quod! Qui, iure suscipit tempora unde rerum autem saepe nisi vel cupiditate iusto. Illum, corrupti? Fugiat quidem accusantium nulla. Aliquid inventore commodi reprehenderit rerum reiciendis! Quidem alias repudiandae eaque eveniet cumque nihil aliquam in expedita, impedit quas ipsum nesciunt ipsa ullam consequuntur dignissimos numquam at nisi porro a, quaerat rem repellendus. Voluptates perspiciatis, in pariatur impedit, nam facilis libero dolorem dolores sunt inventore perferendis, aut sapiente modi nesciunt.
-   
-   
-     
+What sets us apart? It’s our commitment to your peace of mind. We not only promise accurate and secure tax filing but also provide these services at nominal fees, ensuring affordability without compromising quality. Plus, we offer a free consultation to help you understand your tax situation and explore the best strategies to maximize your refunds or minimize liabilities.
+
+Beyond tax filing, we bring innovation to the financial services space, using cutting-edge technologies like Salesforce and AWS to streamline processes and enhance your experience. At Sharma Tax Advisors, we’re not just about filing taxes; we’re about building trusted partnerships, offering proactive advice, and empowering you with clarity and confidence in your finances.
+
+Why wait? Let us handle the numbers while you focus on what truly matters. Reach out today for your free consultation and experience tax filing made simple, efficient, and stress-free. Sharma Tax Advisors – where your satisfaction is our success.
+<br/>
    
    </Box>
   );

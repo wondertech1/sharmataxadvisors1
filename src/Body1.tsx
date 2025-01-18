@@ -24,32 +24,32 @@ const props = {
   xAxis: [{ data: ['A'], scaleType: 'band' as const }],
 };
 
-const seriesA = {
+const Savings = {
   data: [2, 3, 1, 4, 5],
-  label: 'Series A',
+  label: 'Savings',
 };
-const seriesB = {
+const Expenses = {
   data: [3, 1, 4, 2, 1],
-  label: 'Series B',
+  label: 'Expenses',
 };
-const seriesC = {
+const Investments = {
   data: [3, 2, 4, 5, 1],
-  label: 'Series C',
+  label: 'Investments',
 };
 
 const BoxBasic = ({ onButtonClicked2 }:{onButtonClicked2:any})=>{
-  const handleClick1 = () => {
-    const data = 'Appointment';
-    onButtonClicked2(data);
-  };
+ // const handleClick1 = () => {
+  //  const data = '';
+  //  onButtonClicked2(data);
+ // };
   const handleClick2 = () => {
     const data = 'TaxCalculator';
     onButtonClicked2(data);
   };
-  const handleClick3 = () => {
-    const data = 'Appointment';
-    onButtonClicked2(data);
-  };
+ // const handleClick3 = () => {
+  //  const data = '';
+   // onButtonClicked2(data);
+  //};
   return (
     
     <Box component="section" sx={{ border: 0, bgcolor:'#d2e8f340' }}>
@@ -69,13 +69,13 @@ const BoxBasic = ({ onButtonClicked2 }:{onButtonClicked2:any})=>{
   width={400}
   height={300}
   series={[
-    { ...seriesA, stack: 'total' },
-    { ...seriesB, stack: 'total' },
-    { ...seriesC, stack: 'total' },
+    { ...Savings, stack: 'total' },
+    { ...Expenses, stack: 'total' },
+    { ...Investments, stack: 'total' },
   ]}
 />
       
-    <Button variant="contained" size="large" onClick={handleClick1}>Tax Preparation</Button>
+    <Button variant="contained" size="large" >Tax Preparation</Button>
      
       </Grid>
 
@@ -105,15 +105,15 @@ const BoxBasic = ({ onButtonClicked2 }:{onButtonClicked2:any})=>{
           { id: 'logAxis', scaleType: 'log' },
         ]}
         series={[
-          { yAxisId: 'linearAxis', data: sample, label: 'linear' },
-          { yAxisId: 'logAxis', data: sample, label: 'log' },
+          { yAxisId: 'linearAxis', data: sample, label: 'Inflation' },
+          { yAxisId: 'logAxis', data: sample, label: 'Growth' },
         ]}
         leftAxis="linearAxis"
         rightAxis="logAxis"
         height={300}
         width={400}
       />
-      <Button variant="contained" size="large" onClick={handleClick3}>Tax Planning</Button>
+      <Button variant="contained" size="large" >Tax Planning</Button>
       
       </td>
       </tr>
