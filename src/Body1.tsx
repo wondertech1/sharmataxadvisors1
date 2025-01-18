@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 import Table from '@mui/material/Table';
 import { BarChart } from '@mui/x-charts/BarChart';
-import { PieChart } from '@mui/x-charts/PieChart';
+//import { PieChart } from '@mui/x-charts/PieChart';
 import { LineChart } from '@mui/x-charts/LineChart';
 //import Card from '@mui/material/Card';
 //import CardContent from '@mui/material/CardContent';
@@ -24,7 +24,18 @@ const props = {
   xAxis: [{ data: ['A'], scaleType: 'band' as const }],
 };
 
-
+const seriesA = {
+  data: [2, 3, 1, 4, 5],
+  label: 'Series A',
+};
+const seriesB = {
+  data: [3, 1, 4, 2, 1],
+  label: 'Series B',
+};
+const seriesC = {
+  data: [3, 2, 4, 5, 1],
+  label: 'Series C',
+};
 
 const BoxBasic = ({ onButtonClicked2 }:{onButtonClicked2:any})=>{
   const handleClick1 = () => {
@@ -50,29 +61,22 @@ const BoxBasic = ({ onButtonClicked2 }:{onButtonClicked2:any})=>{
       Let us help you maximize your benefits and simplify the tax process.</h1>
       </Grid></Grid>
       
-      <Grid container spacing={0} alignContent='center' justifyContent='center' alignSelf='center' textAlign='center' overflow="hidden">
+      <Grid container spacing={10} alignContent='center' justifyContent='center' alignSelf='center' textAlign='center' overflow="hidden">
       
       
       <Grid size="auto" overflow="hidden">
-      <Table sx={{ border: 0 }}><tr><td>
-      <PieChart
-      {...props}
-      series={[
-        {
-          data: [
-            { id: 0, value: 10 },
-            { id: 1, value: 15,},
-            { id: 2, value: 20,},
-          ],
-          type: 'pie',
-          arcLabel: 'label',
-        },
-      ]}
-    />
+      <BarChart
+  width={400}
+  height={300}
+  series={[
+    { ...seriesA, stack: 'total' },
+    { ...seriesB, stack: 'total' },
+    { ...seriesC, stack: 'total' },
+  ]}
+/>
+      
     <Button variant="contained" size="large" onClick={handleClick1}>Tax Preparation</Button>
-      </td>
-      </tr>
-      </Table>
+     
       </Grid>
 
       <Grid size="auto" overflow="hidden">
