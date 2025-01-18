@@ -14,14 +14,7 @@ const schema = a.schema({
       Phone: a.float(),
       Email: a.string(),
       Preferred_DateTime: a.datetime(),
-    }),  
-
-  TaxCalculate: a
-    .model({
-      Total_earning: a.float(),
-      Total_withholding: a.float(),
-
-    })  
+    }) 
     .authorization((allow) => [allow.publicApiKey()]),
 });
 
