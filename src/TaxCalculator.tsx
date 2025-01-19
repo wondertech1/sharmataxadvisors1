@@ -1,10 +1,16 @@
-//import * as React from 'react';
+import * as React from 'react';
 import { useState } from 'react'
 import { BarChart } from '@mui/x-charts/BarChart';
 import Grid from '@mui/material/Grid2';
 import TextField from '@mui/material/TextField';
 //import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+//import * as React from 'react';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 
   
@@ -20,6 +26,12 @@ export default function FunctionLabel() {
     const [data4, setdata4] = useState(0);
     const [Fedstatus, setFedstatus] = useState('');
     const [Statestatus, setStatestatus] = useState('');
+
+    const [age, setAge] = React.useState('');
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value as string);
+  };
 
     const handleClick = () => {
         //const data = 'Appointment';
@@ -66,6 +78,24 @@ export default function FunctionLabel() {
     <Grid size="auto">
     <br/>
     
+
+    <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          label="Age"
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+
 
         <TextField
           required
