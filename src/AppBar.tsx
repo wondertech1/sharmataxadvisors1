@@ -24,6 +24,7 @@ import Services from "./Services";
 import App from "./App";
 import TaxCalculator from "./TaxCalculator";
 import Body1 from "./Body1"
+import AppointmentSuccess from "./Appointment_success"
 //import test from "../src/assets/tax3.jpg"; // with import
 
 
@@ -142,8 +143,11 @@ export default function DrawerAppBar(props: Props) {
     {(activeComp === "About us") && <Aboutus />}
     {(activeComp === "Pricing") && <Pricing />}
     {(activeComp === "Services") && <Services />}
-    {(activeComp === "Appointment") && <App />}
+    {(activeComp === "Appointment") && <App onButtonClicked2={openNavItem}/>}
     {(activeComp === "TaxCalculator") && <TaxCalculator />}
+    {(activeComp === "Appointment_success") && <AppointmentSuccess />}
+
+    
     
     <Footer />
     </Box>

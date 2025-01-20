@@ -81,28 +81,50 @@ export default function FunctionLabel() {
 
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <InputLabel id="demo-simple-select-label">Filing Status</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={age}
-          label="Age"
+          label="Filing Status"
           onChange={handleChange}
         >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={'Single'}>Single</MenuItem>
+          <MenuItem value={'Married Filing Jointly'}>Married Filing Jointly</MenuItem>
+          <MenuItem value={'Married Filing Seperately'}>Married Filing Seperately</MenuItem>
+          <MenuItem value={'Head of a household'}>Head of a household</MenuItem>
+          
         </Select>
       </FormControl>
-    </Box>
+    </Box> <br/>
+    <TextField
+          disabled
+          id="outlined-disabled"
+          label="Filing type"
+          defaultValue="Standard Deduction"
+        /><br/>
+
+<br/>
+    <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">State</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          label="Filing Status"
+          onChange={handleChange}
+        >
+          <MenuItem value={'Single'}>Single</MenuItem>
+          <MenuItem value={'Married Filing Jointly'}>Married Filing Jointly</MenuItem>
+          <MenuItem value={'Married Filing Seperately'}>Married Filing Seperately</MenuItem>
+          <MenuItem value={'Head of a household'}>Head of a household</MenuItem>
+         
+        </Select>
+      </FormControl>
+    </Box><br/>
 
 
-        <TextField
-          required
-          id="state"
-          label="State"
-          //defaultValue="State"
-        /> <br/><br/>
         <TextField
         
           required

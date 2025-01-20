@@ -1,8 +1,7 @@
 
 import ReactDOM from "react-dom/client";
-//import AppBar from "./AppBar";
-import Underconstruction from "./Underconstruction";
-
+import AppBar from "./AppBar";
+//import { StyledEngineProvider } from '@mui/material/styles';
 
 //import Footer from "./Footer";
 import "./index.css";
@@ -21,7 +20,8 @@ Amplify.configure(outputs);
 ReactDOM.createRoot(document.getElementById("root")!).render(
  
     <ThemeProvider>
-   <Underconstruction />
+        
+    <AppBar />
     </ThemeProvider>
  
 );

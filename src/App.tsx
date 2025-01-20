@@ -8,7 +8,16 @@ import Grid from '@mui/material/Grid2';
 
 //const client = generateClient<Schema>();
 
-function App() {
+
+
+const App = ({ onButtonClicked2 }:{onButtonClicked2:any})=>{
+
+
+  const App1 = () => {
+    //alert('Hello world');
+    const data = 'Appointment_success';
+      onButtonClicked2(data);
+  }
   //const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
   useEffect(() => {
@@ -26,7 +35,24 @@ function App() {
 
 
 <Grid size={4} alignSelf='center' alignContent='center' textAlign='center' bgcolor="#d2e8f340">
-          <TodoCreateForm />
+          <TodoCreateForm 
+          onSuccess={App1}
+          overrides={{
+            Name: {
+              isRequired:true
+            },
+            Phone:{
+              isRequired:true
+            },
+            Email:{
+              isRequired:true
+            },
+            Preferred_DateTime: {
+              isRequired:true
+            },
+          }}
+          
+          />
           </Grid>
 
      
